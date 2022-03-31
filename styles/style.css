@@ -30,11 +30,12 @@
 .header__title {
   line-height: 96px;
   font-size: 102px;
-  font-weight: bolder;
+  font-weight: bold;
   align-self: center;
   margin: 0;
   margin-left: 64px;
-  width: 730px;
+  max-width: 730px;
+  width: 100%;
   z-index: 3;
 }
 
@@ -55,6 +56,10 @@
   color: #2f80ed;
 }
 
+.header__link:hover {
+  color: plum;
+}
+
 .header__main-illustration {
   position: absolute;
   bottom: 0;
@@ -62,6 +67,7 @@
   z-index: 1;
   height: 608px;
   width: 765px;
+  object-fit: cover;
 }
 
 .header__square-pic {
@@ -108,7 +114,7 @@
   margin-bottom: 30px;
 }
 
-.two-columns__paragraph_bottom {
+.two-columns__paragraph:last-child {
   margin-bottom: 0;
 }
 
@@ -145,29 +151,18 @@
 .table {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .table__cell {
   width: 250px;
-}
-
-.table__cell_first-line {
-  display: flex;
-  width: 1100px;
-  justify-content: space-between;
-  margin-top: 60px;
-}
-
-.table__cell_second-line {
-  display: flex;
-  width: 1100px;
-  justify-content: space-between;
   margin-top: 60px;
 }
 
@@ -187,7 +182,7 @@
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -195,6 +190,7 @@
 }
 
 .feynman__photo {
+  background-image: url("../images/feynman.png");
   position: absolute;
   left: 0;
   bottom: 0;
@@ -233,6 +229,10 @@
   right: 48px;
 }
 
+.feynman__link:hover {
+  color: plum;
+}
+
 .kaufman {
   display: flex;
   flex-direction: column;
@@ -240,42 +240,20 @@
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .section-title_theme_dark {
-  margin: 0;
-  width: 60%;
   margin-top: 90px;
-  margin-bottom: 20px;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
   color: white;
-  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
-  margin: 0;
-  width: 60%;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  text-align: center;
   color: white;
-  z-index: 1;
 }
 
 .table_theme_dark {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 90px;
-  z-index: 1;
 }
 
 .table__cell_theme_dark {
@@ -283,41 +261,24 @@
   color: white;
 }
 
-.table__cell_first-line_theme_dark {
-  display: flex;
-  width: 1100px;
-  justify-content: space-between;
-  margin-top: 60px;
-}
-
-.table__cell_second-line_theme_dark {
-  display: flex;
-  width: 1100px;
-  justify-content: space-between;
-  margin-top: 60px;
-}
-
 .table__heading_theme_dark {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bold;
+  color: white;
 }
 
 .table__text_theme_dark {
-  margin: 0;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-  margin-top: 20px;
+  color: white;
 }
 
-.kaufman__trialgle {
-  position: absolute;
+.kaufman__triangle {
   height: 877px;
   width: 877px;
+  background-image: url("../images/kaufman-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
   top: 0;
   right: -210px;
+  z-index: -1;
 }
 
 .footer {
@@ -335,9 +296,12 @@
   margin-bottom: 40px;
 }
 
-.footer__column_content_copyright {
+.footer__column {
   display: flex;
   flex-direction: column;
+}
+
+.footer__column_content_copyright {
   justify-content: space-between;
   align-items: flex-start;
   flex-basis: 711px;
@@ -358,11 +322,6 @@
   font-weight: normal;
 }
 
-.footer__column_content_info {
-  display: flex;
-  flex-direction: column;
-}
-
 .footer__column-heading {
   margin: 0;
   color: white;
@@ -376,11 +335,10 @@
   text-decoration: none;
   display: flex;
   flex-direction: column;
-}
-
-.footer__column_content_social {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+  list-style-type: none;
 }
 
 .footer__column-link {
@@ -389,6 +347,10 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+}
+
+.footer__column-link:hover {
+  color: plum;
 }
 
 .footer__social-icon {
